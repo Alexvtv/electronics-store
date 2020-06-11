@@ -1,0 +1,279 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+	overflow-x: hidden;
+}
+
+// Общая панель навигации
+.main-panel {
+	width: 1050px;
+	margin-left: calc(50vw - 532px);
+	height: 44px;
+	padding-top: 9px;
+	overflow: hidden;
+	.logo-image {
+		margin-left: 40px;
+	}
+	img {
+		display: inline-block;
+		vertical-align: top;
+	}
+	div {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.cart {
+		background-color: #ffffff;
+		float: right;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 47px;
+		width: 100px;
+		height: 30px;
+		padding-top: 4px;
+		div {
+			display: inline-block;
+			vertical-align: top;
+			background-color: #e3e8f0;
+			width: 19px;
+			height: 19px;
+			border-radius: 50%;
+			text-align: center;
+			p {
+				font-size: 12px;
+				margin-top: 1px;
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+		&>p {
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 11px;
+			font-weight: 600;
+			margin: 1px 6px 0 0;
+			color: #000000;
+		}
+		img {
+			margin: 0 10px 0 0;
+			float: left;
+		}
+	}
+	.navigation-panel {
+		width: 170px;
+		height: 25px;
+		margin: 4px 0 0 570px;
+		background-color: #ffffff;
+		display: inline-block;
+		vertical-align: top;
+		li {
+			font-size: 14px;
+			font-weight: 700;
+			font-family: 'Montserrat', sans-serif;
+			color: #000000;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.home-link {
+			float: left;
+		}
+		.account-link {
+			float: right;
+		}
+	}
+}
+
+.sandwitch {
+	cursor: pointer;
+	background-color: #ffffff;
+	width: 43px;
+	height: 43px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding: 9px 7px;
+	border-radius: 6px;
+	border: 1px solid #3e425a;
+	div {
+		margin: 4px 0;
+		width: 27px;
+		height: 3px;
+		background-color: #3e425a;
+	}
+}
+
+.sandwitchNotShown {
+	animation: hideScrollPanelFull 2s;
+}
+.sandwitchShown {
+	animation: showSandwitch 0.8s;
+}
+
+.scroll-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	.main-panel {
+		animation: showScrollPanelFull 2s;
+		overflow: hidden;
+		background-color: #ffffff;
+		height: 43px;
+		border-radius: 6px;
+		.second-sandwitch {
+			cursor: pointer;
+			margin-top: -9px;
+			width: 43px;
+			height: 43px;
+			padding: 9px 7px;
+			&>div {
+				display: block;
+				margin: 4px 0;
+				width: 27px;
+				height: 3px;
+				background-color: #3e425a;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+
+.main-panel {
+	width: 800px;
+	margin-left: calc(50vw - 407px);
+	.navigation-panel {
+		margin: 4px 0 0 320px;
+	}
+	.logo-image {
+		margin-left: 30px;
+	}
+	.cart {
+		margin-right: 37px;
+	}
+}
+.scroll-panel {
+	.main-panel {
+		animation: showScrollPanel1100 2s;
+	}
+}
+.sandwitchNotShown {
+	animation: hideScrollPanel1100 2s;
+}
+	
+}
+
+@media screen and (max-width: 820px) {
+
+.main-panel {
+	width: 532px;
+	margin-left: calc(50vw - 273px);
+	.navigation-panel {
+		margin: 4px 0 0 75px;
+	}
+}
+.scroll-panel {
+	.main-panel {
+		animation: showScrollPanel820 2s;
+	}
+}
+.sandwitchNotShown {
+	animation: hideScrollPanel820 2s;
+}
+
+}
+
+@media screen and (max-width: 545px) {
+
+.main-panel {
+	width: 350px;
+	margin-left: calc(50vw - 182px);
+	&>img {
+		display: none;
+	}
+	.navigation-panel {
+		margin: 4px 0 0 25px;
+		width: 120px;
+		li:nth-child(1) {
+			margin-left: -30px;
+		}
+	}
+	.logo-image {
+		margin-left: 15px;
+	}
+	.cart {
+		width: 50px;
+		margin-right: 14px;
+		&>p {
+			display: none;
+		}
+	}
+}
+.scroll-panel {
+	.main-panel {
+		animation: showScrollPanel545 2s;
+	}
+}
+.sandwitchNotShown {
+	animation: hideScrollPanel545 2s;
+}
+
+}
+
+@keyframes showScrollPanelFull {
+	from {width: 43px;
+		  margin-left: 0;}
+	to {width: 1050px;
+		margin-left: calc(50vw - 532px);}
+}
+@keyframes showScrollPanel1100 {
+	from {width: 43px;
+		  margin-left: 0;}
+	to {width: 800px;
+		margin-left: calc(50vw - 407px);}
+}
+@keyframes showScrollPanel820 {
+	from {width: 43px;
+		  margin-left: 0;}
+	to {width: 534px;
+		margin-left: calc(50vw - 273px);}
+}
+@keyframes showScrollPanel545 {
+	from {width: 43px;
+		  margin-left: 0;}
+	to {width: 350px;
+		margin-left: calc(50vw - 182px);}
+}
+@keyframes hideScrollPanelFull {
+	from {width: 1050px;
+		margin-left: calc(50vw - 532px);}
+	to {width: 43px;
+		  margin-left: 0;}
+}
+@keyframes hideScrollPanel1100 {
+	from {width: 800px;
+		margin-left: calc(50vw - 407px);}
+	to {width: 43px;
+		  margin-left: 0;}
+}
+@keyframes hideScrollPanel820 {
+	from {width: 534px;
+		margin-left: calc(50vw - 273px);}
+	to {width: 43px;
+		  margin-left: 0;}
+}
+@keyframes hideScrollPanel545 {
+	from {width: 350px;
+		margin-left: calc(50vw - 182px);}
+	to {width: 43px;
+		  margin-left: 0;}
+}
+@keyframes showSandwitch {
+	from {top: -100px;}
+	40% {top: 20px;}
+	70% {top: -5px;}
+	to {top: 0;}
+}
+

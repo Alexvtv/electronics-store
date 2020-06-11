@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "copy-b-j",
+    "deploy": "copy-b-j",
+    "edit input type number / removed steps": "copy-b-j",
+    "deploy app": "bj-create-react-app-1b80b",
+    "try to edit input steps": "bj-create-react-app",
+    "edit balance": "bj-create-react-app-1b80b",
+    "Try to fix balance": "bj-create-react-app-1b80b",
+    "try to fix balance": "bj-create-react-app-1b80b",
+    "test to change": "bj-create-react-app-1b80b",
+    "add react-layoyt, webpack based": "bj-create-react-app",
+    "add react-layout": "bj-create-react-app",
+    "fix list of products and button-fucntions": "bj-create-react-app",
+    "fix list of products": "bj-create-react-app",
+    "fix": "bj-create-react-app"
+  }
+}
