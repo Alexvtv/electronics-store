@@ -13,6 +13,7 @@
     "add react-layout": "bj-create-react-app",
     "fix list of products and button-fucntions": "bj-create-react-app",
     "fix list of products": "bj-create-react-app",
-    "fix": "bj-create-react-app"
+    "fix": "bj-create-react-app",
+    "fix login page": "bj-create-react-app"
   }
 }

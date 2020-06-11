@@ -5,7 +5,6 @@ import $ from 'jquery';
 
 import Home from './components/Home.js';
 import Cart from './components/Cart.js';
-import Login from './components/Login.js';
 import Account from './components/Account.js';
 
 import logo1 from './images/logo1.png';
@@ -104,7 +103,7 @@ class App extends Component {
                             </div>
                             <ul className='navigation-panel'>    
                                 <Link to='/'><li className='link home-link'>Home</li></Link>
-                                { localStorage.getItem('authorized') == 'true' ? <Link to='/account'><li className='link account-link'>Login</li></Link> : <Link to='/login'><li className='link account-link'>Account</li></Link> }
+                                <Link to='/account'><li className='link account-link'>Login</li></Link> 
                             </ul>
                             <Link to='/cart'>
                                 <div className='cart'>
@@ -135,7 +134,7 @@ class App extends Component {
                             <img className='logo-image' src={logo1} />
                             <ul className='navigation-panel'>    
                                 <Link to='/'><li className='link home-link'>Home</li></Link>
-                                { localStorage.getItem('authorized') == 'true' ? <Link to='/account'><li className='link account-link'>Login</li></Link> : <Link to='/login'><li className='link account-link'>Account</li></Link> }
+                                <Link to='/account'><li className='link account-link'>Login</li></Link> 
                             </ul>
                             <Link to='/cart'>
                                 <div className='cart'>
@@ -149,7 +148,6 @@ class App extends Component {
                     <div>
                         <Route exact path='/cart' render={ ()=> <Cart orderedProducts={this.state.orderedProducts} /> }/>
                         <Route exact path='/' render={ ()=> <Home products={ this.state.products } orderNewProduct={this.orderNewProduct} /> }/>
-                        <Route exact path='/login'  render={ ()=> <Login /> }/>
                         <Route exact path='/account' render={ ()=> <Account /> }/>
                     </div>
                     { scrollPanel() }
